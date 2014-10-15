@@ -13,14 +13,14 @@ describe 'Full Page Playlist' do
 
 	context 'Grab Links with no parameters' do 
 		it 'should get eevlog links' do 
-			# puts @found.grab_links.show
-			# @found_french.grab_links
+			# @found.grab_links.class
+			# expect(@found_french.grab_links).to be_an_instance_of Array
 		end
 	end
 
 	context 'Grab with word search' do 
 		it 'should get with word search ' do 
-			# @found.grab_links('EEVblog').show
+			# expect(@found.grab_links('EEVblog')).to be_an_instance_of Array
 			# @found_french.grab_links('French').show
 		end
 	end
@@ -32,8 +32,7 @@ describe 'Full Page Playlist' do
 		end
 
 		it 'should do no parameters' do 
-			# puts links = @run_french.grab_links.links
-			# @run_french.you_convert(links)
+			@run_french.grab_links('French').you_convert
 		end
 
 	end

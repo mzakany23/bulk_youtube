@@ -1,7 +1,4 @@
 module Globals
-	SELECTIONS = {
-		max_downloads: 3
-	}
 
 	REPLACE = [
 			         [/\r/, ''], 
