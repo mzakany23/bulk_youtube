@@ -32,7 +32,7 @@ describe 'Full Page Playlist' do
 		end
 
 		it 'should do no parameters' do 
-			links = @run_french.grab_links.links
+			# puts links = @run_french.grab_links.links
 			# @run_french.you_convert(links)
 		end
 

@@ -1,7 +1,7 @@
 # Youtube Bulk Video Downloader:
 =======
 ```
-Uses mechanize and nokogiri
+Uses mechanize (2.7.2) and nokogiri (1.6.1)
 
 Purpose: when you need to download multiple youtube files, say a course or tutorial i.e. to watch offline. 
 

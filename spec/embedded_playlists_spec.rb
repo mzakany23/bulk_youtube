@@ -13,26 +13,26 @@ describe 'Playlist' do
 		
 		it 'should get temples' do
 			# theres a ton of links so I commented out 
-			found_links = Scrape.new(@temples, @save_to)
+			found_links = BulkYoutube::Scrape.new(@temples, @save_to)
 			# found_links.grab_links.count				
 		end
 
 		it 'should get of_monsters' do 
-			found_links = Scrape.new(@of_monsters,@save_to)
+			found_links = BulkYoutube::Scrape.new(@of_monsters,@save_to)
 			# found_links.grab_links.count
 		end
 	end
 
 	context 'Grab the links with word search' do 
 		it 'should get Monsters' do 
-			found_links = Scrape.new(@of_monsters,@save_to)
+			found_links = BulkYoutube::Scrape.new(@of_monsters,@save_to)
 			# found_links.grab_links('Monsters').show
 		end
 	end
 
 	context 'Send files to folder' do 
 		before do 
-			@run = Scrape.new(@of_monsters, @save_to)
+			@run = BulkYoutube::Scrape.new(@of_monsters, @save_to)
 		end
 
 		it 'should send no parameter to folder' do 
