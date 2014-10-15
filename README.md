@@ -28,7 +28,7 @@ Without keyword search:
 > find = Scrape.new(search,save)
 > find.grab_links.links #show the link objects as is
 > find.grab_links.show #show a more concise version  
-> find.you_convert #send links to folder
+> find.grab_links.you_convert #send links to folder
 ```
 ```
 With keyword search:
