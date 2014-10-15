@@ -3,6 +3,7 @@ require "bulk_youtube/globals"
 require 'mechanize'
 require 'nokogiri'
 
+
 module BulkYoutube
   class Scrape
 		include Globals
@@ -90,7 +91,7 @@ module BulkYoutube
 
 			else
 
-				path.links.each do |link|
+				path.links_with(:text => /#{word}/).each do |link|
 
 					break if count > @max_downloads
 					
