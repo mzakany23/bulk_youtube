@@ -81,7 +81,7 @@ module BulkYoutube
 				break if count > @max_downloads
 					youtube = link.click.uri.to_s
 					
-					next if link.text.include?('Play')
+					# next if link.text.include?('Play')
 
 					if youtube.include?('watch?v=')
 						@link_arr << link

@@ -23,6 +23,13 @@ describe 'Full Page Playlist' do
 			# expect(@found.grab_links('EEVblog')).to be_an_instance_of Array
 			# @found_french.grab_links('French').show
 		end
+
+		it 'should grab this page' do 
+			path = 'https://www.youtube.com/watch?v=z5pJvhd3lFQ'
+			save = '/Users/mzakany/Desktop/folder'
+			found = BulkYoutube::Scrape.new(path,save)
+			puts found.grab_links.show
+		end
 	end
 
 	context 'Send to folder' do 
@@ -32,7 +39,7 @@ describe 'Full Page Playlist' do
 		end
 
 		it 'should do no parameters' do 
-			@run_french.grab_links('French').you_convert
+			# @run_french.grab_links('French').you_convert
 		end
 
 	end
