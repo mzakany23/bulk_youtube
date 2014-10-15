@@ -18,19 +18,27 @@ module BulkYoutube
 		end
 		
 
-		def you_convert
-			retry_count = 0
+		# def you_convert
+		# 	retry_count = 0
+		# 	begin
+		# 		send_files(@link_arr)
+		# 	rescue Net::HTTP::Persistent::Error => e
+		# 		raise unless e.message =~ /too man connection resets/
+		# 		if retry_count > @max_retries
+		# 			 puts "**** WARN: Mechanize retried connection reset #{@max_retries} times"
+		# 			 raise
+		# 		end
+		# 		retry_count +=1 
+		# 		Mechanize::HTTP::Agent.http.shutdown
+		# 		retry
+		# 	end
+		# end
+
+			def you_convert
 			begin
 				send_files(@link_arr)
-			rescue Net::HTTP::Persistent::Error => e
-				raise unless e.message =~ /too man connection resets/
-				if retry_count > @max_retries
-					 puts "**** WARN: Mechanize retried connection reset #{@max_retries} times"
-					 raise
-				end
-				retry_count +=1 
-				Mechanize::HTTP::Agent.http.shutdown
-				retry
+			rescue StandardError
+				false
 			end
 		end
 
