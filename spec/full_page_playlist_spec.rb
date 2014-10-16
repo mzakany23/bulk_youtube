@@ -25,10 +25,17 @@ describe 'Full Page Playlist' do
 		end
 
 		it 'should grab this page' do 
+			# path = 'https://www.youtube.com/watch?v=z5pJvhd3lFQ'
+			# save = '/Users/mzakany/Desktop/folder'
+			# found = BulkYoutube::Scrape.new(path,save, 5)
+			# found.grab_links.you_convert
+		end
+
+		it 'benchmark' do 
 			path = 'https://www.youtube.com/watch?v=z5pJvhd3lFQ'
 			save = '/Users/mzakany/Desktop/folder'
-			found = BulkYoutube::Scrape.new(path,save)
-			puts found.grab_links.show
+			found = BulkYoutube::Scrape.new(path,save, 5)
+			found.mec_get(path)
 		end
 	end
 
