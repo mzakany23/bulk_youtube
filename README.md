@@ -4,16 +4,17 @@
 ```
 gem install 'bulk_youtube'
 
-obj = BulkYoutube::Scrape.new(youtube_path,save_folder, max_downloads)
-obj.grab_links.you_convert
+obj = BulkYoutube::Scrape.new(youtube_path,save_folder, max_downloads) 
+obj.grab_links.you_convert 
+# word is born 
 ```
 
 ```
-Uses mechanize (2.7.2) and nokogiri (1.6.1)
+Uses mechanize (2.7.2)
 
 Purpose: when you need to download multiple youtube files, say a course or tutorial i.e. to watch offline. 
 
-Note: change the @max_downloads to increase the amount of mp4s can send.
+Note: pass in max_downloads to increase the amount of mp4s can send.
 
 ```
 
