@@ -19,11 +19,12 @@ module BulkYoutube
 		end
 		
 
-			def you_convert
+		def you_convert
 			begin
 				send_files(@link_arr)
 			rescue StandardError
 				false
+				retry
 			end
 		end
 
@@ -69,23 +70,20 @@ module BulkYoutube
 
 		if word.nil?
 		
-			path.links_with(:href => /watch\?v=/).each do |link|
+			path.links_with(:href => /watch\?v=/).each do |link|				
 				break if count > @max_downloads
-					
-						@link_arr << link
-						count += 1
+					@link_arr << link
+					count += 1
 				end
 
 			else
 
 				path.links_with(:text => /#{word}/).each do |link|
-
 					break if count > @max_downloads		
-					
-					if link.text.include?(word) && link.href.include?('watch?v=')
-						@link_arr << link
-						count += 1
-					end
+						if link.text.include?(word) && link.href.include?('watch?v=')
+							@link_arr << link
+							count += 1
+						end
 				end
 			end
 			self

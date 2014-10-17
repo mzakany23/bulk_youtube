@@ -1,5 +1,13 @@
 # Youtube Bulk Video Downloader:
 =======
+
+```
+gem install 'bulk_youtube'
+
+obj = BulkYoutube::Scrape.new(youtube_path,save_folder, max_downloads)
+obj.grab_links.you_convert
+```
+
 ```
 Uses mechanize (2.7.2) and nokogiri (1.6.1)
 
